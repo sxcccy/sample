@@ -3,8 +3,9 @@ import urllib
 import re
 import requests
 from lxml import etree
-from selenium import webdriver
+#from selenium import webdriver
 import time
+import random
 
 fp = open(r'/home/tyouki/log/61jjj-yazhou-log', 'r')
 log = fp.readlines()
@@ -41,7 +42,7 @@ for i in a:
                     flog = open(r'/home/tyouki/log/61jjj-yazhou-log', 'a+')
                     flog.write(addlog)
                     flog.close()
-                    time.sleep(8)
+                    time.sleep(random.randint(3, 8))
                 except Exception as e:
                     print(e)
             else:
